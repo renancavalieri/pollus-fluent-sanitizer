@@ -1,0 +1,30 @@
+{
+    "name": "pollus/fluent-sanitizer",
+    "description": "A simple and fluent sanitizer for PHP",
+    "keywords": ["php", "fluent", "sanitization", "sanitizer", "pollus"],
+    "license": "MIT",
+    "authors": 
+    [
+        {
+            "name": "Renan Cavalieri",
+            "email": "renan@tecdicas.com"
+        }
+    ],
+    "type": "library",
+    "require": 
+    {
+        "php": ">=7.1",
+		"ext-mbstring": "*"
+    },
+	"require-dev": 
+    {
+        "phpunit/phpunit": "^7"
+    },
+    "autoload": 
+	{
+        "psr-4": 
+        {
+            "Pollus\\Sanitizer\\": "src/"
+        }
+    }
+}
