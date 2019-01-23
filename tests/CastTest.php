@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class CastTestCase extends TestCase
+final class CastTest extends TestCase
 {
     public function testStringCasting(): void
     {

@@ -248,6 +248,23 @@ class StringType extends BaseType
     }
     
     /**
+     * Encapsulates a string with a char
+     * 
+     * @param string $char
+     * @return $this
+     */
+    public function encapsulate(string $char) : StringType
+    {
+        if ($this->val !== null)
+        {
+            $this->val = ltrim($this->val, $char);
+            $this->val = rtrim($this->val, $char);
+            $this->val = $char . $this->val . $char;
+        }
+        return $this;
+    }
+    
+    /**
      * Internal ucfirst code
      * @param string $string
      * @return type

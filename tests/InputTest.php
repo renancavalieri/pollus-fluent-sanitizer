@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class InputTestCase extends TestCase
+final class InputTest extends TestCase
 {
     public function testGetInputNonStrict(): void
     {

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class SanatizeTestCase extends TestCase
+final class SanatizeTest extends TestCase
 {
     public function testStringMethods(): void
     {
@@ -72,7 +72,11 @@ final class SanatizeTestCase extends TestCase
         $f = new \Pollus\Sanitizer\Types\StringType("ZARA BURKE-GAFFNEY", false);
         $this->assertEquals("Zara Burke-Gaffney", $f->capitalizeName()->val());
         
-   
+        $f = new \Pollus\Sanitizer\Types\StringType("MY NAME", false);
+        $this->assertEquals("%MY NAME%", $f->encapsulate("%")->val());
+        
+        $f = new \Pollus\Sanitizer\Types\StringType("MY NAME%%", false);
+        $this->assertEquals("%MY NAME%", $f->encapsulate("%")->val());
     }
     
     public function testStringException(): void
